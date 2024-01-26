@@ -1,0 +1,13 @@
+.CODE
+
+get_ntdll PROC
+    xor     rax, rax
+    mov     rax, gs:[60h]
+    mov     rax, [rax + 18h]
+    mov     rax, [rax + 20h]
+    mov     rax, [rax]
+    mov     rax, [rax + 20h]
+    ret
+get_ntdll ENDP
+
+END
